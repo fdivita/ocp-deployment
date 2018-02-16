@@ -91,8 +91,7 @@ openshift_master_default_subdomain=apps.ocpcluster.opentlc.com
 ############################################################################
 # Authentication
 ############################################################################
-openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true',
-'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
+openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true','challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 openshift_master_htpasswd_file=/root/htpasswd.openshift
 
 openshift_master_cluster_method=native
