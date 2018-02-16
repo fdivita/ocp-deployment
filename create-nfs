@@ -1,0 +1,20 @@
+
+
+
+
+
+
+ 
+ 
+#sudo  mkdir /srv/nfs
+ 
+ 
+ #create a file called /etc/exports 
+ # add the following inside inside add the following
+ #/srv/nfs  *(rw,sync,no_root_squash)
+ #save
+ #
+ #systemctl restart nfs.service
+ #systemctl enable nfs.service
+ 
+ 
