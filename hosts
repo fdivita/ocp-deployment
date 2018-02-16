@@ -1,0 +1,48 @@
+#hosts for the OCP HA cluster
+[masters]
+master1.example.com
+master2.example.com
+master3.example.com
+
+[etcd]
+master1.example.com
+master2.example.com
+master3.example.com
+
+[nodes]
+#nodes where pods will be deployed
+node1.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+node2.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+node3.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+node4.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+node5.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+node6.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+
+#master nodes 
+master1.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+master2.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+master3.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+
+#infra nodes
+infranode1.example.com openshift_node_labels="{'logging':'true','region': 'infra','env' : 'infra','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+infranode2.example.com openshift_node_labels="{'logging':'true','region': 'infra','env' : 'infra','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+infranode3.example.com openshift_node_labels="{'logging':'true','region': 'infra','env' : 'infra','openshift_schedulable':'False','cluster': 'cce9', 'zone': 'eu-central-1b'}"
+
+
+[nfs]
+oselab.example.com
+
+[lb]
+loadbalancer1.example.com
+
+[etcd]
+master1.example.com
+master2.example.com
+master3.example.com
+
+[OCP:children]
+masters
+etcd
+nodes
+nfs
+lb
