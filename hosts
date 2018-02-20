@@ -11,17 +11,17 @@ master3.example.com
 
 [nodes]
 #nodes where pods will be deployed
-node1.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
-node2.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
-node3.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
-node4.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
-node5.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
-node6.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
+node1.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'True', 'zone': 'eu-central-1b'}"
+node2.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'True', 'zone': 'eu-central-1b'}"
+node3.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'True', 'zone': 'eu-central-1b'}"
+node4.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'True', 'zone': 'eu-central-1b'}"
+node5.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'True', 'zone': 'eu-central-1b'}"
+node6.example.com openshift_node_labels="{'logging':'true','region': 'primary','env' : 'app','openshift_schedulable':'True', 'zone': 'eu-central-1b'}"
 
 #master nodes 
 master1.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
 master2.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
-master3.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
+master3.example.com openshift_node_labels="{'logging':'true','region': 'master','openshift_schedulable':'Flase', 'zone': 'eu-central-1b'}"
 
 #infra nodes
 infranode1.example.com openshift_node_labels="{'logging':'true','region': 'infra','env' : 'infra','openshift_schedulable':'False', 'zone': 'eu-central-1b'}"
@@ -30,7 +30,7 @@ infranode3.example.com openshift_node_labels="{'logging':'true','region': 'infra
 
 
 [nfs]
-oselab.example.com
+node6.example.com
 
 [lb]
 loadbalancer1.example.com
@@ -62,7 +62,7 @@ openshift_deployment_type=openshift-enterprise
 deployment_type=openshift-enterprise
 openshift_release=v3.7
 deployment_type=openshift-enterprise
-containerized=false
+containerized=True
 
 
 
@@ -74,7 +74,7 @@ osm_cluster_network_cidr=10.1.0.0/16
 openshift_portal_net=172.30.0.0/16
 
 os_sdn_network_plugin_name='redhat/openshift-ovs-multitenant'
-#os_sdn_network_plugin_name='redhat/openshift-ovs-subnet'
+os_sdn_network_plugin_name='redhat/openshift-ovs-subnet'
 osm_cluster_network_cidr=10.128.0.0/14
 
 
@@ -84,8 +84,8 @@ osm_cluster_network_cidr=10.128.0.0/14
 
 openshift_master_api_port=443
 openshift_master_console_port=8443
-openshift_master_cluster_public_hostname=loadbalancer1-b6a1.oslab.opentlc.com
-openshift_master_cluster_hostname=loadbalancer1-b6a1.oslab.opentlc.com
+openshift_master_cluster_public_hostname=loadbalancer1-b212.oslab.opentlc.com
+openshift_master_cluster_hostname=loadbalancer1-b212.oslab.opentlc.com
 openshift_master_default_subdomain=apps.ocpcluster.opentlc.com
 
 ############################################################################
