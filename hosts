@@ -82,10 +82,10 @@ osm_cluster_network_cidr=10.128.0.0/14
 # OPenshift Master Vars
 ###########################################################################
 
-openshift_master_api_port=443
+openshift_master_api_port=8443
 openshift_master_console_port=8443
-openshift_master_cluster_public_hostname=loadbalancer1-b212.oslab.opentlc.com
-openshift_master_cluster_hostname=loadbalancer1-b212.oslab.opentlc.com
+openshift_master_cluster_public_hostname=loadbalancer1-4dbd.oslab.opentlc.com
+openshift_master_cluster_hostname=loadbalancer1.example.com
 openshift_master_default_subdomain=apps.ocpcluster.opentlc.com
 
 ############################################################################
@@ -119,6 +119,8 @@ openshift_hosted_registry_enforcequota=true
 
 openshift_hosted_router_selector='env=infra'
 openshift_hosted_router_replicas=2
+
+openshift_hosted_router_certificate={"certfile": "/root/certs/router.crt", "keyfile": "/root/certs/router.key", "cafile": "/root/certs/router-ca.crt"}
 
 openshift_disable_check=disk_availability,docker_storage,memory_availability,docker_image_availability
 
