@@ -59,10 +59,7 @@ openshift_node_kubelet_args={'pods-per-core': ['10'], 'max-pods': ['250'], 'imag
 
 
 openshift_deployment_type=openshift-enterprise
-deployment_type=openshift-enterprise
 openshift_release=v3.7
-deployment_type=openshift-enterprise
-containerized=True
 
 
 
@@ -118,14 +115,14 @@ openshift_hosted_registry_enforcequota=true
 ###########################################################################
 
 openshift_hosted_router_selector='env=infra'
-openshift_hosted_router_replicas=2
+openshift_hosted_router_replicas=3
 
-openshift_hosted_router_certificate={"certfile": "/root/certs/router.crt", "keyfile": "/root/certs/router.key", "cafile": "/root/certs/router-ca.crt"}
+#openshift_hosted_router_certificate={"certfile": "/root/certs/router.crt", "keyfile": "/root/certs/router.key", "cafile": "/root/certs/router-ca.crt"}
 
 openshift_disable_check=disk_availability,docker_storage,memory_availability,docker_image_availability
 
-openshift_master_overwrite_named_certificates=True
-openshift_master_ca_certificate={'certfile': '/root/intermediate_ca.crt', 'keyfile': '/root/intermediate_ca.key'}
+#openshift_master_overwrite_named_certificates=True
+#openshift_master_ca_certificate={'certfile': '/root/intermediate_ca.crt', 'keyfile': '/root/intermediate_ca.key'}
 
 ###########################################################################
 ### OpenShift Metrics and Logging Vars
