@@ -59,7 +59,7 @@ openshift_node_kubelet_args={'pods-per-core': ['10'], 'max-pods': ['250'], 'imag
 
 
 openshift_deployment_type=openshift-enterprise
-openshift_release=v3.7
+openshift_release=v3.6
 
 
 
@@ -81,9 +81,9 @@ osm_cluster_network_cidr=10.128.0.0/14
 
 openshift_master_api_port=8443
 openshift_master_console_port=8443
-openshift_master_cluster_public_hostname=loadbalancer1-4dbd.oslab.opentlc.com
+openshift_master_cluster_public_hostname=loadbalancer1-80c1.oslab.opentlc.com
 openshift_master_cluster_hostname=loadbalancer1.example.com
-openshift_master_default_subdomain=apps.ocpcluster.opentlc.com
+openshift_master_default_subdomain=apps.oslab.opentlc.com
 
 ############################################################################
 # Authentication
@@ -140,7 +140,7 @@ openshift_metrics_storage_volume_name=metrics
 openshift_metrics_storage_volume_size=10Gi
 openshift_metrics_storage_labels={'storage': 'metrics'}
 
-openshift_master_metrics_public_url=https://hawkular-metrics.apps.ocpcluster.opentlc.com/hawkular/metrics
+openshift_master_metrics_public_url=https://hawkular-metrics.apps.oslab.opentlc.com/hawkular/metrics
 
 openshift_metrics_cassandra_nodeselector={"env":"infra"}
 openshift_metrics_hawkular_nodeselector={"env":"infra"}
