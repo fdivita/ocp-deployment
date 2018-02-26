@@ -56,5 +56,5 @@ lb
 The createnfs contains all the commands use to create a fake nfs.
 The file storage contains the commands used to create PV.
 deploy_metric_loggin  is used to deploy logging and metrics.
-To test the Jenkins deployment and CI/CD you coudl use https://github.com/openshift-roadshow/nationalparks 
+To test the Jenkins deployment and CI/CD you could  use https://github.com/openshift-roadshow/nationalparks 
 
