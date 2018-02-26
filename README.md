@@ -1,4 +1,4 @@
-# ocp-openshiftdeployment
+# ocp-openshift-deployment
  The repository contains the scripts and configuration file used to deploy an OCP HA Cluster . 
  
  #OCP nodes
